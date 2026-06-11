@@ -97,8 +97,10 @@
   @media(max-width:520px){.content-grid{grid-template-columns:1fr}}
   .post{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.25s;display:flex;flex-direction:column}
   .post:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(19,19,26,.08);border-color:var(--ink)}
-  .post .thumb{aspect-ratio:4/3;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;position:relative}
+  .post .thumb{aspect-ratio:9/16;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .post .thumb img{width:100%;height:100%;object-fit:cover;display:block}
   .post .thumb svg{width:46px;height:46px;color:var(--accent)}
+  .post .body p.metric{color:var(--accent);font-weight:600}
   .post .badge{position:absolute;top:13px;left:13px;background:var(--paper);border:1px solid var(--line);padding:4px 11px;border-radius:999px;font-size:.7rem;font-weight:600;letter-spacing:.03em}
   .post .body{padding:18px 20px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
   .post .body h4{font-family:'Inter';font-size:.98rem;font-weight:600;margin-bottom:4px}
@@ -361,26 +363,25 @@
   document.getElementById('yr').textContent = new Date().getFullYear();
 
   const posts = [
-    {url:"https://www.instagram.com/reels/DGAWApGtoDa/", platform:"Instagram", type:"Reel"},
-    {url:"https://www.instagram.com/reel/DY7li--IH8E/", platform:"Instagram", type:"Reel"},
-    {url:"https://www.instagram.com/reel/DYmxBQQN26B/", platform:"Instagram", type:"Reel"},
-    {url:"https://www.facebook.com/reel/1997826750945584", platform:"Facebook", type:"Reel"},
-    {url:"https://www.instagram.com/p/DYNOag9Nxxq/", platform:"Instagram", type:"Post"},
-    {url:"https://www.instagram.com/p/DVWLh4JCC0t/", platform:"Instagram", type:"Post"},
-    {url:"https://www.instagram.com/p/DWfetqRoal2/", platform:"Instagram", type:"Post"}
+    {url:"https://www.instagram.com/reels/DGAWApGtoDa/", badge:"Instagram · Reel", title:"TransferGo × Dezny", desc:"1.7M views", img:"assets/img/content-1.jpg"},
+    {url:"https://www.instagram.com/p/DYNOag9Nxxq/", badge:"Instagram · Reel", title:"TransferGo × Meltem Güveyi", desc:"£5.8 CPA", img:"assets/img/content-2.jpg"},
+    {url:"https://www.instagram.com/p/DVWLh4JCC0t/", badge:"Instagram · Reel", title:"TransferGo × Hayalimdeki Yemekler", desc:"2.2M views", img:"assets/img/content-3.jpg"},
+    {url:"https://www.instagram.com/reel/DY7li--IH8E/", badge:"Instagram · Reel", title:"TransferGo × Misha Palyukh", desc:"£4.2 CPA", img:"assets/img/content-4.jpg"},
+    {url:"https://www.instagram.com/reels/DYmxBQQN26B/", badge:"Instagram · Reel", title:"TransferGo × Uliana Bora", desc:"£32K revenue", img:"assets/img/content-5.jpg"},
+    {url:"https://www.facebook.com/reel/1997826750945584", badge:"Facebook · Reel", title:"TransferGo × Inday Joanna", desc:"2.5M views", img:"assets/img/content-6.jpg"},
+    {url:"https://www.instagram.com/p/DWfetqRoal2/", badge:"Instagram · Reel", title:"TransferGo × Germaniya", desc:"1.4M views", img:"assets/img/content-7.jpg"},
+    {url:"https://www.instagram.com/reel/DXj_T_JjZ1x/", badge:"Event", title:"True Influencer Event · Prague", desc:"120+ influencer attendees · 17M impressions", img:"assets/img/content-8.jpg"},
+    {url:"https://www.instagram.com/p/DY7DZpTMyx0/", badge:"Event", title:"Emre Onar × TransferGo · London", desc:"45+ influencers · 4M impressions", img:"assets/img/content-9.jpg"}
   ];
-  const igIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>';
-  const fbIcon = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg>';
 
   const grid = document.getElementById('contentGrid');
   posts.forEach(p=>{
-    const isFB = p.platform === "Facebook";
     const a = document.createElement('a');
     a.href = p.url; a.target = "_blank"; a.rel = "noopener"; a.className = "post";
     a.innerHTML = `
-      <div class="thumb"><span class="badge">${p.platform} · ${p.type}</span>${isFB ? fbIcon : igIcon}</div>
+      <div class="thumb"><span class="badge">${p.badge}</span><img src="${p.img}" alt="${p.title}" loading="lazy"></div>
       <div class="body">
-        <div><h4>${p.platform} ${p.type}</h4><p>Creator / brand campaign content</p></div>
+        <div><h4>${p.title}</h4><p class="metric">${p.desc}</p></div>
         <span class="open">Open post ↗</span>
       </div>`;
     grid.appendChild(a);
