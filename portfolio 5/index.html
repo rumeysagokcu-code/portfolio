@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rumeysa Gokcu — AI-Native Marketer & Creator Strategist</title>
+<meta name="description" content="Portfolio of Rumeysa Gokcu — AI-native marketer with 7+ years in influencer and performance marketing. Selected social content, AI UGC, references and results." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#f7f6f3;
+    --paper:#ffffff;
+    --ink:#13131a;
+    --muted:#6b6b76;
+    --line:#e6e4de;
+    --accent:#5b4bff;
+    --accent-soft:#efeefc;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;line-height:1.65;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.08;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+  .label{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .accent{color:var(--accent)}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(247,246,243,.8);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{font-family:'Fraunces';font-weight:600;font-size:1.15rem;letter-spacing:-.02em}
+  .nav-links{display:flex;gap:30px}
+  .nav-links a{font-size:.9rem;color:var(--muted);transition:.2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{padding:9px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:500;font-size:.86rem;transition:.2s}
+  .nav-cta:hover{background:var(--ink);color:#fff}
+  @media(max-width:780px){.nav-links{display:none}}
+
+  /* HERO */
+  .hero{padding:96px 0 64px}
+  .hero .label{margin-bottom:22px}
+  .hero h1{font-size:clamp(2.7rem,6.4vw,5rem);font-weight:500;letter-spacing:-.025em}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero .lead{font-size:clamp(1.05rem,1.8vw,1.25rem);color:var(--muted);max-width:620px;margin-top:26px}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+  .btn{padding:13px 24px;border-radius:999px;font-weight:500;font-size:.94rem;transition:.2s;display:inline-flex;align-items:center;gap:8px;border:1px solid transparent}
+  .btn.primary{background:var(--ink);color:#fff}
+  .btn.primary:hover{background:var(--accent)}
+  .btn.ghost{border-color:var(--line);background:var(--paper)}
+  .btn.ghost:hover{border-color:var(--ink)}
+
+  /* STATS */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat{padding:30px 22px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .num{font-family:'Fraunces';font-weight:500;font-size:2.1rem;letter-spacing:-.02em}
+  .stat .lbl{color:var(--muted);font-size:.82rem;margin-top:6px}
+  @media(max-width:780px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}}
+
+  /* SECTIONS */
+  section.block{padding:92px 0}
+  section.block + section.block{border-top:1px solid var(--line)}
+  .sec-head{margin-bottom:48px;max-width:640px}
+  .sec-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 14px}
+  .sec-head p{color:var(--muted)}
+
+  /* ABOUT */
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  @media(max-width:780px){.cols{grid-template-columns:1fr}}
+  .panel{background:var(--paper);padding:28px}
+  .panel h4{font-family:'Inter';font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{padding:6px 13px;background:var(--bg);border:1px solid var(--line);border-radius:999px;font-size:.82rem}
+  .about-lead{font-size:1.15rem;color:var(--ink);max-width:760px;margin-bottom:40px;line-height:1.7}
+
+  /* EXPERIENCE */
+  .job{padding:30px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:160px 1fr;gap:30px}
+  .job:first-of-type{border-top:none}
+  @media(max-width:680px){.job{grid-template-columns:1fr;gap:10px}}
+  .job .when{font-size:.85rem;color:var(--muted);font-weight:500;padding-top:4px}
+  .job h3{font-size:1.35rem;font-weight:500}
+  .job .where{color:var(--accent);font-weight:500;font-size:.92rem;margin:2px 0 14px}
+  .job ul{margin:0;padding-left:18px;color:var(--muted)}
+  .job ul li{margin-bottom:9px}
+  .job ul li strong{color:var(--ink);font-weight:600}
+
+  /* CONTENT GRID */
+  .content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:860px){.content-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.content-grid{grid-template-columns:1fr}}
+  .post{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+  .post:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(19,19,26,.08);border-color:var(--ink)}
+  .post .thumb{aspect-ratio:4/3;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;position:relative}
+  .post .thumb svg{width:46px;height:46px;color:var(--accent)}
+  .post .badge{position:absolute;top:13px;left:13px;background:var(--paper);border:1px solid var(--line);padding:4px 11px;border-radius:999px;font-size:.7rem;font-weight:600;letter-spacing:.03em}
+  .post .body{padding:18px 20px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+  .post .body h4{font-family:'Inter';font-size:.98rem;font-weight:600;margin-bottom:4px}
+  .post .body p{color:var(--muted);font-size:.83rem}
+  .post .open{margin-top:16px;font-size:.82rem;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px}
+
+  /* UGC VIDEO GRID */
+  .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:860px){.video-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:640px){.video-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:430px){.video-grid{grid-template-columns:1fr}}
+  .vcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.2s}
+  .vcard:hover{box-shadow:0 14px 40px rgba(19,19,26,.08);border-color:var(--ink)}
+  .vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000}
+  .vcard .meta{padding:13px 15px}
+  .vcard .meta h4{font-family:'Inter';font-size:.9rem;font-weight:600}
+  .vcard .meta p{color:var(--muted);font-size:.78rem;margin-top:2px}
+
+  /* REFERENCES */
+  .quotes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:780px){.quotes{grid-template-columns:1fr}}
+  .quote-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px}
+  .quote-card .mark{font-family:'Fraunces';font-size:3rem;line-height:.6;color:var(--accent);display:block;margin-bottom:10px}
+  .quote-card blockquote{font-size:.97rem;color:#36363f;line-height:1.7}
+  .quote-card .who{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);display:flex;align-items:center;gap:14px}
+  .avatar{width:46px;height:46px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Fraunces';font-weight:600;font-size:1.05rem;flex-shrink:0}
+  .who .name{font-weight:600;font-size:.95rem}
+  .who .role{color:var(--muted);font-size:.82rem}
+  .who a{color:var(--accent)}
+
+  /* CONTACT */
+  .contact{text-align:center;padding:100px 0}
+  .contact h2{font-size:clamp(2.1rem,5vw,3.4rem);margin-bottom:16px}
+  .contact p{color:var(--muted);max-width:520px;margin:0 auto 32px}
+  .contact-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:.84rem;text-align:center}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:.6s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <div class="logo">Rumeysa Gokcu</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#content">Content</a>
+      <a href="#ugc">AI UGC</a>
+      <a href="#references">References</a>
+    </div>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="label">AI-Native Marketer · Creator Strategist · Milan</div>
+    <h1>I turn creators into<br /><em>measurable growth.</em></h1>
+    <p class="lead">7+ years scaling influencer &amp; performance marketing across international markets — blending strategy, creativity and AI to deliver real revenue, low CPAs and high-converting full-funnel campaigns.</p>
+    <div class="hero-btns">
+      <a class="btn primary" href="#content">View selected work →</a>
+      <a class="btn ghost" href="assets/Rumeysa-Gokcu-CV.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">7+</div><div class="lbl">Years international experience</div></div>
+      <div class="stat"><div class="num">1,000+</div><div class="lbl">Influencers managed / year</div></div>
+      <div class="stat"><div class="num">20%</div><div class="lbl">Activations from referral — at 1% of budget</div></div>
+      <div class="stat"><div class="num">6-figure</div><div class="lbl">Budgets owned end-to-end</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">About</div>
+      <h2>Strategy, creativity &amp; analytics — in one operator.</h2>
+    </div>
+    <p class="about-lead reveal">I'm an AI-native marketer based in Milan, specialising in building and scaling creator ecosystems and performance campaigns. I own influencer and paid media strategy across priority markets, manage six-figure budgets with full responsibility for revenue and CPA, and use AI-powered tools to make faster, sharper decisions — across the full funnel, from sourcing and briefing creators to producing UGC, running A/B experiments and building attribution that proves ROI.</p>
+    <div class="cols reveal">
+      <div class="panel">
+        <h4>What I do</h4>
+        <div class="chips">
+          <span class="chip">Influencer Marketing 360</span>
+          <span class="chip">Affiliate Marketing</span>
+          <span class="chip">Growth &amp; Performance</span>
+          <span class="chip">Multi-Channel Campaigns</span>
+          <span class="chip">Paid Media (Meta, TikTok)</span>
+          <span class="chip">A/B Testing</span>
+          <span class="chip">Revenue Attribution</span>
+        </div>
+      </div>
+      <div class="panel">
+        <h4>Tools</h4>
+        <div class="chips">
+          <span class="chip">Tableau</span>
+          <span class="chip">Google Analytics</span>
+          <span class="chip">AppsFlyer</span>
+          <span class="chip">Advanced Excel</span>
+          <span class="chip">Claude / AI</span>
+          <span class="chip">Notion</span>
+        </div>
+      </div>
+      <div class="panel">
+        <h4>Languages &amp; base</h4>
+        <div class="chips">
+          <span class="chip">English</span>
+          <span class="chip">Italian</span>
+          <span class="chip">Turkish</span>
+          <span class="chip">📍 Milan, Italy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">Experience</div>
+      <h2>Growth roles at TransferGo</h2>
+      <p>From part-time specialist to Marketing Manager — scaling influencer marketing into a performance-driven, CPA-focused channel.</p>
+    </div>
+
+    <div class="reveal">
+      <div class="job">
+        <div class="when">Jan 2026 – Present</div>
+        <div>
+          <h3>Marketing Manager</h3>
+          <div class="where">TransferGo · Milan</div>
+          <ul>
+            <li>Own influencer &amp; performance marketing strategy across priority international markets, managing six-figure budgets with full responsibility for revenue growth and CPA targets.</li>
+            <li>Built and scaled a referral growth program delivering <strong>20% of total customer activations</strong> while consuming only <strong>1% of the marketing budget</strong>.</li>
+            <li>Define and scale influencer strategy, negotiate partnerships, and implement attribution and tracking frameworks to optimise performance and ROI.</li>
+            <li>Lead 360° paid media across Meta and TikTok, and drive creative &amp; experimentation strategy (UGC, influencer content, A/B testing) using AI-powered tools.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2023 – 2025</div>
+        <div>
+          <h3>Senior Marketing Specialist</h3>
+          <div class="where">TransferGo · Milan</div>
+          <ul>
+            <li>Drove acquisition and revenue growth across key markets by managing <strong>1,000+ influencers annually</strong> with agencies and local teams.</li>
+            <li>Led end-to-end campaign execution and optimisation — sourcing, briefing, content, testing — scaling influencer marketing into a performance-driven channel.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2019 – 2023</div>
+        <div>
+          <h3>Marketing Specialist <span style="color:var(--muted);font-family:'Inter';font-size:.9rem">(Part-time)</span></h3>
+          <div class="where">TransferGo · Milan</div>
+          <ul>
+            <li>Completed my Master's degree while working part-time, executing data-driven, multi-channel campaigns (influencer, CRM, SEO, partnerships) to drive awareness, acquisition and retention.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">Education</div>
+        <div>
+          <h3>Education</h3>
+          <ul style="margin-top:10px">
+            <li><strong>MS — Management of Innovation</strong>, Università degli Studi di Milano (2019–2021)</li>
+            <li><strong>BSc — Economics</strong>, Yildiz Technical University (2015–2019)</li>
+            <li><strong>Erasmus — Economics</strong>, University of Lille 1 (2016–2017)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED CONTENT -->
+<section class="block" id="content">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">Selected Content</div>
+      <h2>High-performing social campaigns</h2>
+      <p>A selection of creator and brand content I've produced and scaled. Click any card to open the original post.</p>
+    </div>
+    <div class="content-grid" id="contentGrid"></div>
+  </div>
+</section>
+
+<!-- AI UGC -->
+<section class="block" id="ugc">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">AI UGC</div>
+      <h2>AI-generated UGC content</h2>
+      <p>AI-native creative built for performance — realistic, on-brand UGC produced with AI avatar and video tools, ready for paid social testing at scale.</p>
+    </div>
+    <div class="video-grid reveal" id="videoGrid"></div>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section class="block" id="references">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">References</div>
+      <h2>What colleagues say</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote-card reveal">
+        <span class="mark">&ldquo;</span>
+        <blockquote>I had the pleasure of working with Rumeysa, and she's one of those rare people who makes everyone around her better at their job. She's exceptional at managing global campaigns across multiple channels — the kind of work with a hundred moving parts and a dozen stakeholders — and holds it together with a clarity and calm that's genuinely impressive. She built out our influencer marketing from the ground up and turned it into a real success — not just activity, but results. What I valued most was how she works: deeply collaborative, proactively sharing her expertise, always approaching challenges as problems to be solved rather than obstacles to complain about. Any team would be lucky to have her. I recommend her without hesitation.</blockquote>
+        <div class="who">
+          <div class="avatar">BO</div>
+          <div>
+            <div class="name"><a href="https://www.linkedin.com/in/buket-ogutler" target="_blank" rel="noopener">Buket Ogutler ↗</a></div>
+            <div class="role">Director of Brand · TransferGo</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote-card reveal">
+        <span class="mark">&ldquo;</span>
+        <blockquote>I've had the pleasure of witnessing Rumeysa's growth firsthand, from intern to seasoned digital marketer, and I highly recommend her for her exceptional skills in the digital space. She has a keen eye for the newest trends and a deep understanding of digital marketing strategy. Her ability to cultivate collaborations, execute campaigns and host engaging sessions is truly commendable, and she has extensive experience working with influencers across diverse international markets. One of her standout qualities is her proactive, "no complaint" approach to problem-solving — she always brings innovative solutions. A valuable asset to any team; I wholeheartedly endorse her.</blockquote>
+        <div class="who">
+          <div class="avatar">SE</div>
+          <div>
+            <div class="name"><a href="https://www.linkedin.com/in/apfelsaft" target="_blank" rel="noopener">Senem Erguvenoglu ↗</a></div>
+            <div class="role">Director of Marketing · TransferGo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <div class="label">Let's work together</div>
+    <h2 style="margin-top:16px">Have a campaign in mind?</h2>
+    <p>Available for influencer strategy, performance marketing and AI UGC projects. Let's talk.</p>
+    <div class="contact-row">
+      <a class="btn primary" href="mailto:rumeysagokcu@gmail.com">✉ rumeysagokcu@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/rumeysagokcu/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn ghost" href="assets/Rumeysa-Gokcu-CV.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Rumeysa Gokcu · Milan, Italy · AI-Native Marketer</div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const posts = [
+    {url:"https://www.instagram.com/reels/DGAWApGtoDa/", platform:"Instagram", type:"Reel"},
+    {url:"https://www.instagram.com/reel/DY7li--IH8E/", platform:"Instagram", type:"Reel"},
+    {url:"https://www.instagram.com/reel/DYmxBQQN26B/", platform:"Instagram", type:"Reel"},
+    {url:"https://www.facebook.com/reel/1997826750945584", platform:"Facebook", type:"Reel"},
+    {url:"https://www.instagram.com/p/DYNOag9Nxxq/", platform:"Instagram", type:"Post"},
+    {url:"https://www.instagram.com/p/DVWLh4JCC0t/", platform:"Instagram", type:"Post"},
+    {url:"https://www.instagram.com/p/DWfetqRoal2/", platform:"Instagram", type:"Post"}
+  ];
+  const igIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>';
+  const fbIcon = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg>';
+
+  const grid = document.getElementById('contentGrid');
+  posts.forEach(p=>{
+    const isFB = p.platform === "Facebook";
+    const a = document.createElement('a');
+    a.href = p.url; a.target = "_blank"; a.rel = "noopener"; a.className = "post";
+    a.innerHTML = `
+      <div class="thumb"><span class="badge">${p.platform} · ${p.type}</span>${isFB ? fbIcon : igIcon}</div>
+      <div class="body">
+        <div><h4>${p.platform} ${p.type}</h4><p>Creator / brand campaign content</p></div>
+        <span class="open">Open post ↗</span>
+      </div>`;
+    grid.appendChild(a);
+  });
+
+  // AI UGC videos
+  const videos = [
+    {src:"assets/videos/ugc-1.mp4", poster:"assets/img/poster-1.jpg", title:"AI UGC · Spot 01", sub:"AI avatar creative"},
+    {src:"assets/videos/ugc-2.mp4", poster:"assets/img/poster-2.jpg", title:"AI UGC · Spot 02", sub:"AI avatar creative"},
+    {src:"assets/videos/ugc-3.mp4", poster:"assets/img/poster-3.jpg", title:"AI UGC · Spot 03", sub:"AI avatar creative"}
+  ];
+  const vGrid = document.getElementById('videoGrid');
+  videos.forEach(v=>{
+    const d = document.createElement('div');
+    d.className = "vcard";
+    d.innerHTML = `
+      <video src="${v.src}" poster="${v.poster}" controls preload="metadata" playsinline></video>
+      <div class="meta"><h4>${v.title}</h4><p>${v.sub}</p></div>`;
+    vGrid.appendChild(d);
+  });
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
